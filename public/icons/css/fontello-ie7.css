@@ -1,0 +1,88 @@
+[class^="tpasfw-"], [class*=" tpasfw-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+
+  /* fix buttons height */
+  line-height: 1em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+
+.tpasfw-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.tpasfw-resize-small { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.tpasfw-search-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.tpasfw-resize-full { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.tpasfw-search-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.tpasfw-search-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.tpasfw-popup { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.tpasfw-search-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.tpasfw-arrow-combo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.tpasfw-search-5 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.tpasfw-resize-full-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.tpasfw-search-6 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;'); }
+.tpasfw-resize-full-alt-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;'); }
+.tpasfw-search-7 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
+.tpasfw-resize-small-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
+.tpasfw-basket { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
+.tpasfw-resize-small-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
+.tpasfw-basket-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe809;&nbsp;'); }
+.tpasfw-bag { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
+.tpasfw-list-nested { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
+.tpasfw-basket-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;'); }
+.tpasfw-resize-small-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;'); }
+.tpasfw-basket-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80c;&nbsp;'); }
+.tpasfw-resize-full-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80c;&nbsp;'); }
+.tpasfw-basket-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80d;&nbsp;'); }
+.tpasfw-cart { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80e;&nbsp;'); }
+.tpasfw-basket-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80f;&nbsp;'); }
+.tpasfw-basket-circled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe810;&nbsp;'); }
+.tpasfw-user { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe811;&nbsp;'); }
+.tpasfw-login { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe812;&nbsp;'); }
+.tpasfw-cancel { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe813;&nbsp;'); }
+.tpasfw-cancel-circled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe814;&nbsp;'); }
+.tpasfw-cancel-circled2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe815;&nbsp;'); }
+.tpasfw-cancel-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe816;&nbsp;'); }
+.tpasfw-cancel-circled-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe817;&nbsp;'); }
+.tpasfw-cancel-circled-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe818;&nbsp;'); }
+.tpasfw-cancel-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe819;&nbsp;'); }
+.tpasfw-cancel-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81a;&nbsp;'); }
+.tpasfw-left-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81b;&nbsp;'); }
+.tpasfw-right-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81c;&nbsp;'); }
+.tpasfw-left-open-mini { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81d;&nbsp;'); }
+.tpasfw-right-open-mini { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81e;&nbsp;'); }
+.tpasfw-left-open { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81f;&nbsp;'); }
+.tpasfw-right-open { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe820;&nbsp;'); }
+.tpasfw-left-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe821;&nbsp;'); }
+.tpasfw-right-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe822;&nbsp;'); }
+.tpasfw-left-small { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe823;&nbsp;'); }
+.tpasfw-right-small { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe824;&nbsp;'); }
+.tpasfw-left-circle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe825;&nbsp;'); }
+.tpasfw-right-circle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe826;&nbsp;'); }
+.tpasfw-left-dir { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe827;&nbsp;'); }
+.tpasfw-right-dir { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe828;&nbsp;'); }
+.tpasfw-left-circle-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe829;&nbsp;'); }
+.tpasfw-right-circle-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82a;&nbsp;'); }
+.tpasfw-menu { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf008;&nbsp;'); }
+.tpasfw-th-list { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf009;&nbsp;'); }
+.tpasfw-th-thumb { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf00a;&nbsp;'); }
+.tpasfw-th-thumb-empty { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf00b;&nbsp;'); }
+.tpasfw-link-ext { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf08e;&nbsp;'); }
+.tpasfw-filter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0b0;&nbsp;'); }
+.tpasfw-resize-full-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0b2;&nbsp;'); }
+.tpasfw-sort { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0dc;&nbsp;'); }
+.tpasfw-desktop { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf108;&nbsp;'); }
+.tpasfw-tablet { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf10a;&nbsp;'); }
+.tpasfw-mobile { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf10b;&nbsp;'); }
+.tpasfw-sort-alt-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf160;&nbsp;'); }
+.tpasfw-sort-alt-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf161;&nbsp;'); }
+.tpasfw-cart-plus { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf217;&nbsp;'); }
+.tpasfw-cart-arrow-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf218;&nbsp;'); }
+.tpasfw-opencart { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf23d;&nbsp;'); }
+.tpasfw-user-circle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2bd;&nbsp;'); }
+.tpasfw-user-circle-o { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2be;&nbsp;'); }
+.tpasfw-user-o { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2c0;&nbsp;'); }
+.tpasfw-window-close { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2d3;&nbsp;'); }
+.tpasfw-window-close-o { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2d4;&nbsp;'); }
+.tpasfw-search-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf50d;&nbsp;'); }

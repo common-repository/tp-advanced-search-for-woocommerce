@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta charset="UTF-8">
+  <style>
+    html {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    a:hover,
+    a:active {
+      outline: 0;
+    }
+    input {
+      margin: 0;
+      font-size: 100%;
+      vertical-align: middle;
+      *overflow: visible;
+      line-height: normal;
+    }
+    input::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333;
+      background-color: #fff;
+    }
+    a {
+      color: #08c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #005580;
+      text-decoration: underline;
+    }
+    .row {
+      margin-left: -20px;
+      *zoom: 1;
+    }
+    .row:before,
+    .row:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .row:after {
+      clear: both;
+    }
+    .span3 {
+      float: left;
+      min-height: 1px;
+      margin-left: 20px;
+      width: 220px;
+    }
+    .container {
+      width: 940px;
+      margin-right: auto;
+      margin-left: auto;
+      *zoom: 1;
+    }
+    .container:before,
+    .container:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .container:after {
+      clear: both;
+    }
+    small {
+      font-size: 85%;
+    }
+    h1 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+      line-height: 40px;
+      font-size: 38.5px;
+    }
+    h1 small {
+      font-weight: normal;
+      line-height: 1;
+      color: #999;
+      font-size: 24.5px;
+    }
+
+    body {
+      margin-top: 90px;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      margin-left: -480px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding-top: 10px;
+      z-index: 10;
+    }
+    .footer {
+      color: #ddd;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: underline;
+    }
+    .the-icons {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .switch {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      color: #666;
+    }
+    .switch input {
+      margin-right: 0.3em;
+    }
+    .codesOn .i-name {
+      display: none;
+    }
+    .codesOn .i-code {
+      display: inline;
+    }
+    .i-code {
+      display: none;
+    }
+    @font-face {
+      font-family: 'fontello';
+      src: url('./font/fontello.eot?76386714');
+      src: url('./font/fontello.eot?76386714#iefix') format('embedded-opentype'),
+           url('./font/fontello.woff?76386714') format('woff'),
+           url('./font/fontello.ttf?76386714') format('truetype'),
+           url('./font/fontello.svg?76386714#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .demo-icon {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+    </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>fontello <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="span3" title="Code: 0xe800">
+          <i class="demo-icon tpasfw-search">&#xe800;</i> <span class="i-name">tpasfw-search</span><span class="i-code">0xe800</span>
+        </div>
+        <div class="span3" title="Code: 0xe800">
+          <i class="demo-icon tpasfw-resize-small">&#xe800;</i> <span class="i-name">tpasfw-resize-small</span><span class="i-code">0xe800</span>
+        </div>
+        <div class="span3" title="Code: 0xe801">
+          <i class="demo-icon tpasfw-search-1">&#xe801;</i> <span class="i-name">tpasfw-search-1</span><span class="i-code">0xe801</span>
+        </div>
+        <div class="span3" title="Code: 0xe801">
+          <i class="demo-icon tpasfw-resize-full">&#xe801;</i> <span class="i-name">tpasfw-resize-full</span><span class="i-code">0xe801</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe802">
+          <i class="demo-icon tpasfw-search-outline">&#xe802;</i> <span class="i-name">tpasfw-search-outline</span><span class="i-code">0xe802</span>
+        </div>
+        <div class="span3" title="Code: 0xe803">
+          <i class="demo-icon tpasfw-search-2">&#xe803;</i> <span class="i-name">tpasfw-search-2</span><span class="i-code">0xe803</span>
+        </div>
+        <div class="span3" title="Code: 0xe803">
+          <i class="demo-icon tpasfw-popup">&#xe803;</i> <span class="i-name">tpasfw-popup</span><span class="i-code">0xe803</span>
+        </div>
+        <div class="span3" title="Code: 0xe804">
+          <i class="demo-icon tpasfw-search-3">&#xe804;</i> <span class="i-name">tpasfw-search-3</span><span class="i-code">0xe804</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe804">
+          <i class="demo-icon tpasfw-arrow-combo">&#xe804;</i> <span class="i-name">tpasfw-arrow-combo</span><span class="i-code">0xe804</span>
+        </div>
+        <div class="span3" title="Code: 0xe805">
+          <i class="demo-icon tpasfw-search-5">&#xe805;</i> <span class="i-name">tpasfw-search-5</span><span class="i-code">0xe805</span>
+        </div>
+        <div class="span3" title="Code: 0xe805">
+          <i class="demo-icon tpasfw-resize-full-1">&#xe805;</i> <span class="i-name">tpasfw-resize-full-1</span><span class="i-code">0xe805</span>
+        </div>
+        <div class="span3" title="Code: 0xe806">
+          <i class="demo-icon tpasfw-search-6">&#xe806;</i> <span class="i-name">tpasfw-search-6</span><span class="i-code">0xe806</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe806">
+          <i class="demo-icon tpasfw-resize-full-alt-1">&#xe806;</i> <span class="i-name">tpasfw-resize-full-alt-1</span><span class="i-code">0xe806</span>
+        </div>
+        <div class="span3" title="Code: 0xe807">
+          <i class="demo-icon tpasfw-search-7">&#xe807;</i> <span class="i-name">tpasfw-search-7</span><span class="i-code">0xe807</span>
+        </div>
+        <div class="span3" title="Code: 0xe807">
+          <i class="demo-icon tpasfw-resize-small-1">&#xe807;</i> <span class="i-name">tpasfw-resize-small-1</span><span class="i-code">0xe807</span>
+        </div>
+        <div class="span3" title="Code: 0xe808">
+          <i class="demo-icon tpasfw-basket">&#xe808;</i> <span class="i-name">tpasfw-basket</span><span class="i-code">0xe808</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe808">
+          <i class="demo-icon tpasfw-resize-small-alt">&#xe808;</i> <span class="i-name">tpasfw-resize-small-alt</span><span class="i-code">0xe808</span>
+        </div>
+        <div class="span3" title="Code: 0xe809">
+          <i class="demo-icon tpasfw-basket-1">&#xe809;</i> <span class="i-name">tpasfw-basket-1</span><span class="i-code">0xe809</span>
+        </div>
+        <div class="span3" title="Code: 0xe80a">
+          <i class="demo-icon tpasfw-bag">&#xe80a;</i> <span class="i-name">tpasfw-bag</span><span class="i-code">0xe80a</span>
+        </div>
+        <div class="span3" title="Code: 0xe80a">
+          <i class="demo-icon tpasfw-list-nested">&#xe80a;</i> <span class="i-name">tpasfw-list-nested</span><span class="i-code">0xe80a</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe80b">
+          <i class="demo-icon tpasfw-basket-2">&#xe80b;</i> <span class="i-name">tpasfw-basket-2</span><span class="i-code">0xe80b</span>
+        </div>
+        <div class="span3" title="Code: 0xe80b">
+          <i class="demo-icon tpasfw-resize-small-2">&#xe80b;</i> <span class="i-name">tpasfw-resize-small-2</span><span class="i-code">0xe80b</span>
+        </div>
+        <div class="span3" title="Code: 0xe80c">
+          <i class="demo-icon tpasfw-basket-3">&#xe80c;</i> <span class="i-name">tpasfw-basket-3</span><span class="i-code">0xe80c</span>
+        </div>
+        <div class="span3" title="Code: 0xe80c">
+          <i class="demo-icon tpasfw-resize-full-2">&#xe80c;</i> <span class="i-name">tpasfw-resize-full-2</span><span class="i-code">0xe80c</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe80d">
+          <i class="demo-icon tpasfw-basket-alt">&#xe80d;</i> <span class="i-name">tpasfw-basket-alt</span><span class="i-code">0xe80d</span>
+        </div>
+        <div class="span3" title="Code: 0xe80e">
+          <i class="demo-icon tpasfw-cart">&#xe80e;</i> <span class="i-name">tpasfw-cart</span><span class="i-code">0xe80e</span>
+        </div>
+        <div class="span3" title="Code: 0xe80f">
+          <i class="demo-icon tpasfw-basket-4">&#xe80f;</i> <span class="i-name">tpasfw-basket-4</span><span class="i-code">0xe80f</span>
+        </div>
+        <div class="span3" title="Code: 0xe810">
+          <i class="demo-icon tpasfw-basket-circled">&#xe810;</i> <span class="i-name">tpasfw-basket-circled</span><span class="i-code">0xe810</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe811">
+          <i class="demo-icon tpasfw-user">&#xe811;</i> <span class="i-name">tpasfw-user</span><span class="i-code">0xe811</span>
+        </div>
+        <div class="span3" title="Code: 0xe812">
+          <i class="demo-icon tpasfw-login">&#xe812;</i> <span class="i-name">tpasfw-login</span><span class="i-code">0xe812</span>
+        </div>
+        <div class="span3" title="Code: 0xe813">
+          <i class="demo-icon tpasfw-cancel">&#xe813;</i> <span class="i-name">tpasfw-cancel</span><span class="i-code">0xe813</span>
+        </div>
+        <div class="span3" title="Code: 0xe814">
+          <i class="demo-icon tpasfw-cancel-circled">&#xe814;</i> <span class="i-name">tpasfw-cancel-circled</span><span class="i-code">0xe814</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe815">
+          <i class="demo-icon tpasfw-cancel-circled2">&#xe815;</i> <span class="i-name">tpasfw-cancel-circled2</span><span class="i-code">0xe815</span>
+        </div>
+        <div class="span3" title="Code: 0xe816">
+          <i class="demo-icon tpasfw-cancel-1">&#xe816;</i> <span class="i-name">tpasfw-cancel-1</span><span class="i-code">0xe816</span>
+        </div>
+        <div class="span3" title="Code: 0xe817">
+          <i class="demo-icon tpasfw-cancel-circled-1">&#xe817;</i> <span class="i-name">tpasfw-cancel-circled-1</span><span class="i-code">0xe817</span>
+        </div>
+        <div class="span3" title="Code: 0xe818">
+          <i class="demo-icon tpasfw-cancel-circled-outline">&#xe818;</i> <span class="i-name">tpasfw-cancel-circled-outline</span><span class="i-code">0xe818</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe819">
+          <i class="demo-icon tpasfw-cancel-2">&#xe819;</i> <span class="i-name">tpasfw-cancel-2</span><span class="i-code">0xe819</span>
+        </div>
+        <div class="span3" title="Code: 0xe81a">
+          <i class="demo-icon tpasfw-cancel-3">&#xe81a;</i> <span class="i-name">tpasfw-cancel-3</span><span class="i-code">0xe81a</span>
+        </div>
+        <div class="span3" title="Code: 0xe81b">
+          <i class="demo-icon tpasfw-left-open-big">&#xe81b;</i> <span class="i-name">tpasfw-left-open-big</span><span class="i-code">0xe81b</span>
+        </div>
+        <div class="span3" title="Code: 0xe81c">
+          <i class="demo-icon tpasfw-right-open-big">&#xe81c;</i> <span class="i-name">tpasfw-right-open-big</span><span class="i-code">0xe81c</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe81d">
+          <i class="demo-icon tpasfw-left-open-mini">&#xe81d;</i> <span class="i-name">tpasfw-left-open-mini</span><span class="i-code">0xe81d</span>
+        </div>
+        <div class="span3" title="Code: 0xe81e">
+          <i class="demo-icon tpasfw-right-open-mini">&#xe81e;</i> <span class="i-name">tpasfw-right-open-mini</span><span class="i-code">0xe81e</span>
+        </div>
+        <div class="span3" title="Code: 0xe81f">
+          <i class="demo-icon tpasfw-left-open">&#xe81f;</i> <span class="i-name">tpasfw-left-open</span><span class="i-code">0xe81f</span>
+        </div>
+        <div class="span3" title="Code: 0xe820">
+          <i class="demo-icon tpasfw-right-open">&#xe820;</i> <span class="i-name">tpasfw-right-open</span><span class="i-code">0xe820</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe821">
+          <i class="demo-icon tpasfw-left-bold">&#xe821;</i> <span class="i-name">tpasfw-left-bold</span><span class="i-code">0xe821</span>
+        </div>
+        <div class="span3" title="Code: 0xe822">
+          <i class="demo-icon tpasfw-right-bold">&#xe822;</i> <span class="i-name">tpasfw-right-bold</span><span class="i-code">0xe822</span>
+        </div>
+        <div class="span3" title="Code: 0xe823">
+          <i class="demo-icon tpasfw-left-small">&#xe823;</i> <span class="i-name">tpasfw-left-small</span><span class="i-code">0xe823</span>
+        </div>
+        <div class="span3" title="Code: 0xe824">
+          <i class="demo-icon tpasfw-right-small">&#xe824;</i> <span class="i-name">tpasfw-right-small</span><span class="i-code">0xe824</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe825">
+          <i class="demo-icon tpasfw-left-circle">&#xe825;</i> <span class="i-name">tpasfw-left-circle</span><span class="i-code">0xe825</span>
+        </div>
+        <div class="span3" title="Code: 0xe826">
+          <i class="demo-icon tpasfw-right-circle">&#xe826;</i> <span class="i-name">tpasfw-right-circle</span><span class="i-code">0xe826</span>
+        </div>
+        <div class="span3" title="Code: 0xe827">
+          <i class="demo-icon tpasfw-left-dir">&#xe827;</i> <span class="i-name">tpasfw-left-dir</span><span class="i-code">0xe827</span>
+        </div>
+        <div class="span3" title="Code: 0xe828">
+          <i class="demo-icon tpasfw-right-dir">&#xe828;</i> <span class="i-name">tpasfw-right-dir</span><span class="i-code">0xe828</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe829">
+          <i class="demo-icon tpasfw-left-circle-1">&#xe829;</i> <span class="i-name">tpasfw-left-circle-1</span><span class="i-code">0xe829</span>
+        </div>
+        <div class="span3" title="Code: 0xe82a">
+          <i class="demo-icon tpasfw-right-circle-1">&#xe82a;</i> <span class="i-name">tpasfw-right-circle-1</span><span class="i-code">0xe82a</span>
+        </div>
+        <div class="span3" title="Code: 0xf008">
+          <i class="demo-icon tpasfw-menu">&#xf008;</i> <span class="i-name">tpasfw-menu</span><span class="i-code">0xf008</span>
+        </div>
+        <div class="span3" title="Code: 0xf009">
+          <i class="demo-icon tpasfw-th-list">&#xf009;</i> <span class="i-name">tpasfw-th-list</span><span class="i-code">0xf009</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf00a">
+          <i class="demo-icon tpasfw-th-thumb">&#xf00a;</i> <span class="i-name">tpasfw-th-thumb</span><span class="i-code">0xf00a</span>
+        </div>
+        <div class="span3" title="Code: 0xf00b">
+          <i class="demo-icon tpasfw-th-thumb-empty">&#xf00b;</i> <span class="i-name">tpasfw-th-thumb-empty</span><span class="i-code">0xf00b</span>
+        </div>
+        <div class="span3" title="Code: 0xf08e">
+          <i class="demo-icon tpasfw-link-ext">&#xf08e;</i> <span class="i-name">tpasfw-link-ext</span><span class="i-code">0xf08e</span>
+        </div>
+        <div class="span3" title="Code: 0xf0b0">
+          <i class="demo-icon tpasfw-filter">&#xf0b0;</i> <span class="i-name">tpasfw-filter</span><span class="i-code">0xf0b0</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf0b2">
+          <i class="demo-icon tpasfw-resize-full-alt">&#xf0b2;</i> <span class="i-name">tpasfw-resize-full-alt</span><span class="i-code">0xf0b2</span>
+        </div>
+        <div class="span3" title="Code: 0xf0dc">
+          <i class="demo-icon tpasfw-sort">&#xf0dc;</i> <span class="i-name">tpasfw-sort</span><span class="i-code">0xf0dc</span>
+        </div>
+        <div class="span3" title="Code: 0xf108">
+          <i class="demo-icon tpasfw-desktop">&#xf108;</i> <span class="i-name">tpasfw-desktop</span><span class="i-code">0xf108</span>
+        </div>
+        <div class="span3" title="Code: 0xf10a">
+          <i class="demo-icon tpasfw-tablet">&#xf10a;</i> <span class="i-name">tpasfw-tablet</span><span class="i-code">0xf10a</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf10b">
+          <i class="demo-icon tpasfw-mobile">&#xf10b;</i> <span class="i-name">tpasfw-mobile</span><span class="i-code">0xf10b</span>
+        </div>
+        <div class="span3" title="Code: 0xf160">
+          <i class="demo-icon tpasfw-sort-alt-up">&#xf160;</i> <span class="i-name">tpasfw-sort-alt-up</span><span class="i-code">0xf160</span>
+        </div>
+        <div class="span3" title="Code: 0xf161">
+          <i class="demo-icon tpasfw-sort-alt-down">&#xf161;</i> <span class="i-name">tpasfw-sort-alt-down</span><span class="i-code">0xf161</span>
+        </div>
+        <div class="span3" title="Code: 0xf217">
+          <i class="demo-icon tpasfw-cart-plus">&#xf217;</i> <span class="i-name">tpasfw-cart-plus</span><span class="i-code">0xf217</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf218">
+          <i class="demo-icon tpasfw-cart-arrow-down">&#xf218;</i> <span class="i-name">tpasfw-cart-arrow-down</span><span class="i-code">0xf218</span>
+        </div>
+        <div class="span3" title="Code: 0xf23d">
+          <i class="demo-icon tpasfw-opencart">&#xf23d;</i> <span class="i-name">tpasfw-opencart</span><span class="i-code">0xf23d</span>
+        </div>
+        <div class="span3" title="Code: 0xf2bd">
+          <i class="demo-icon tpasfw-user-circle">&#xf2bd;</i> <span class="i-name">tpasfw-user-circle</span><span class="i-code">0xf2bd</span>
+        </div>
+        <div class="span3" title="Code: 0xf2be">
+          <i class="demo-icon tpasfw-user-circle-o">&#xf2be;</i> <span class="i-name">tpasfw-user-circle-o</span><span class="i-code">0xf2be</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf2c0">
+          <i class="demo-icon tpasfw-user-o">&#xf2c0;</i> <span class="i-name">tpasfw-user-o</span><span class="i-code">0xf2c0</span>
+        </div>
+        <div class="span3" title="Code: 0xf2d3">
+          <i class="demo-icon tpasfw-window-close">&#xf2d3;</i> <span class="i-name">tpasfw-window-close</span><span class="i-code">0xf2d3</span>
+        </div>
+        <div class="span3" title="Code: 0xf2d4">
+          <i class="demo-icon tpasfw-window-close-o">&#xf2d4;</i> <span class="i-name">tpasfw-window-close-o</span><span class="i-code">0xf2d4</span>
+        </div>
+        <div class="span3" title="Code: 0xf50d">
+          <i class="demo-icon tpasfw-search-4">&#xf50d;</i> <span class="i-name">tpasfw-search-4</span><span class="i-code">0xf50d</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="https://fontello.com">fontello.com</a></div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+// ------------------------------------------------------------
+
+// function custom_sale_badge($badge_html, $product) {
+//     // Modify the sale badge HTML
+//     // For example, change the badge text or add an icon
+//     return '<span class="custom-onsale">Special Offer</span>';
+// }
+
+// add_filter('tpasfw_product_sale_badge', 'custom_sale_badge', 10, 2);
+
+// ------------------------------------------------------------
+
+// function add_custom_product_field($product) {
+//     // Assume 'custom_field' is the meta key for the custom field
+//     $custom_field_value = get_post_meta($product->get_id(), 'custom_field', true);
+//     if (!empty($custom_field_value)) {
+//         echo '<div class="custom-field">' . esc_html($custom_field_value) . '</div>';
+//     }
+// }
+
+// add_action('tpasfw_after_product_title', 'add_custom_product_field');
+
+// ------------------------------------------------------------
+
+// function add_custom_content_after_price($product) {
+//     // Example: Adding a promotional message or additional information
+//     echo '<div class="custom-promo">Free Shipping on this Product!</div>';
+// }
+
+// add_action('tpasfw_after_product_price', 'add_custom_content_after_price');
+
+// ------------------------------------------------------------
+
+// add_filter('tpasfw_loading_html', 'customize_tp_loading_html', 10, 2);
+// function customize_tp_loading_html($loading_html, $loading_type) {
+//     // Modify the $loading_html as needed based on $loading_type or other logic
+//     if ($loading_type == 1) {
+//         // Example modification for loading type 1
+//         $loading_html = '<div class="custom-loading-style">' . $loading_html . '</div>';
+//     }
+
+//     return $loading_html;
+// }
+
+// ------------------------------------------------------------
+
+// function add_custom_class_to_tpasfw_search_results($additional_classes) {
+//     return $additional_classes . ' woocommerce'; // Append a new class
+// }
+
+// add_filter('tpasfw_search_results_additional_class', 'add_custom_class_to_tpasfw_search_results');
+
+// ------------------------------------------------------------
+
+// add_filter('tpasfw_responsive_item_widths', 'custom_modify_widths');
+// function custom_modify_widths($widths) {
+//     // Modify the widths as needed
+//     $widths['desktop'] = '50'; // Example modification
+//     return $widths;
+// }
+
+// ------------------------------------------------------------
+
+// add_filter('tpasfw_logo_position_values', 'custom_modify_logo_positions');
+// function custom_modify_logo_positions($positions) {
+//     // Modify the positions as needed
+//     $positions['abs_left'] = 2; // Example modification
+//     return $positions;
+// }
+
+// ------------------------------------------------------------
+// Change Option Names:
+// add_filter('tpasfw_orderby_options', function($options) {
+//     $options['date'] = __('Sort by Newest', 'tpasfw');
+//     return $options;
+// });
+
+// Remove Options:
+// add_filter('tpasfw_orderby_options', function($options) {
+//     unset($options['rating']); // Remove the 'Order by Average Rating' option
+//     return $options;
+// });
+
+// Change Options Order:
+// add_filter('tpasfw_orderby_options', function($options) {
+//     $new_order = array(
+//         'popularity' => $options['popularity'],
+//         'price'      => $options['price'],
+//         // Continue reordering as needed
+//     );
+//     return $new_order;
+// });
+
+// ------------------------------------------------------------
+
+// Filter for Category Title:
+// Modify the category title before it is displayed.
+// add_filter('tpasfw_categories_title_filter', function($title) {
+//     return 'My Custom Title'; // Replace with your custom title
+// });
+
+// ------------------------------------------------------------
+
+// Filter for Category Link:
+// Modify the URL of each category link. This could be used to add query parameters or change the link structure.
+// add_filter('tpasfw_category_link_filter', function($link, $term_id) {
+//     return $link . '?additional_param=value'; // Modify as needed
+// }, 10, 2);
+
+// ------------------------------------------------------------
+
+// Filter for Category Image:
+// Modify the image URL, perhaps to change the size or add a default image if none exists.
+// add_filter('tpasfw_category_image_url_filter', function($url, $thumbnail_id) {
+//     if (!$url) {
+//         return 'path/to/default/image.jpg'; // Path to a default image
+//     }
+//     return $url; // Return the original or modified URL
+// }, 10, 2);
+
+// ------------------------------------------------------------
+
+// Filter for Final Output:
+// Modify the entire HTML output of the function before it is returned.
+// add_filter('tpasfw_categories_output_filter', function($output) {
+//     return '<div class="custom-wrapper">' . $output . '</div>'; // Wrap output in additional HTML
+// });
+
+// ------------------------------------------------------------

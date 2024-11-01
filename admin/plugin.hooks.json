@@ -1,0 +1,99 @@
+[
+    {
+        "hook_name": "tpasfw_product_sale_badge",
+        "description": "Modify the sale badge HTML, such as changing the badge text or adding an icon.",
+        "code_example": "function custom_sale_badge($badge_html, $product) {\n    return '<span class=\"custom-onsale\">Special Offer</span>';\n}\n\nadd_filter('tpasfw_product_sale_badge', 'custom_sale_badge', 10, 2);",
+        "additional_explanations": "This hook allows for customization of the sale badge displayed on products. You can alter the text, add icons, or even change the style."
+    },
+    {
+        "hook_name": "tpasfw_after_product_title",
+        "description": "Add a custom field after the product title.",
+        "code_example": "function add_custom_product_field($product) {\n    $custom_field_value = get_post_meta($product->get_id(), 'custom_field', true);\n    if (!empty($custom_field_value)) {\n        echo '<div class=\"custom-field\">' . esc_html($custom_field_value) . '</div>';\n    }\n}\n\nadd_action('tpasfw_after_product_title', 'add_custom_product_field');",
+        "additional_explanations": "Use this action to display additional information such as a custom meta field or any custom content immediately after the product title."
+    },
+    {
+        "hook_name": "tpasfw_after_product_price",
+        "description": "Add custom content after the product price.",
+        "code_example": "function add_custom_content_after_price($product) {\n    echo '<div class=\"custom-promo\">Free Shipping on this Product!</div>';\n}\n\nadd_action('tpasfw_after_product_price', 'add_custom_content_after_price');",
+        "additional_explanations": "Ideal for adding promotional messages, discount information, or extra details related to the product's price."
+    },
+    {
+        "hook_name": "tpasfw_loading_html",
+        "description": "Customize the loading HTML based on the loading type.",
+        "code_example": "function customize_tp_loading_html($loading_html, $loading_type) {\n    if ($loading_type == 1) {\n        $loading_html = '<div class=\"custom-loading-style\">' . $loading_html . '</div>';\n    }\n    return $loading_html;\n}\n\nadd_filter('tpasfw_loading_html', 'customize_tp_loading_html', 10, 2);",
+        "additional_explanations": "Modify the loading indicator's HTML. Useful for creating a custom loader or adjusting the existing one based on different contexts or loading types."
+    },
+    {
+        "hook_name": "tpasfw_search_results_additional_class",
+        "description": "Append additional classes to the tpasfw search results.",
+        "code_example": "function add_custom_class_to_tpasfw_search_results($additional_classes) {\n    return $additional_classes . ' woocommerce';\n}\n\nadd_filter('tpasfw_search_results_additional_class', 'add_custom_class_to_tpasfw_search_results');",
+        "additional_explanations": "Enhance the styling or functionality of the search results by adding custom CSS classes."
+    },
+    {
+        "hook_name": "tpasfw_responsive_item_widths",
+        "description": "Modify the responsive widths of items.",
+        "code_example": "function custom_modify_widths($widths) {\n    $widths['desktop'] = '50';\n    return $widths;\n}\n\nadd_filter('tpasfw_responsive_item_widths', 'custom_modify_widths');",
+        "additional_explanations": "Adjust the width parameters for different devices, allowing for responsive design customization."
+    },
+    {
+        "hook_name": "tpasfw_logo_position_values",
+        "description": "Customize the position values of the logo.",
+        "code_example": "function custom_modify_logo_positions($positions) {\n    $positions['abs_left'] = 2;\n    return $positions;\n}\n\nadd_filter('tpasfw_logo_position_values', 'custom_modify_logo_positions');",
+        "additional_explanations": "Alter the logo's position in the layout, offering flexibility in theme design and branding."
+    },
+    {
+        "hook_name": "tpasfw_orderby_options",
+        "description": "Modify, remove, or reorder the 'Order by' options.",
+        "code_example": "add_filter('tpasfw_orderby_options', function($options) {\n    unset($options['rating']);\n    return $options;\n});",
+        "additional_explanations": "Change the sorting options available to users, like adding new sort criteria, removing existing ones, or changing the order of options."
+    },
+    {
+        "hook_name": "tpasfw_orderby_options",
+        "description": "Change the sorting options names.",
+        "code_example": "add_filter('tpasfw_orderby_options', function($options) {\n    $options['date'] = __('Sort by Newest', 'tpasfw');\n    return $options;\n});",
+        "additional_explanations": "Change the sorting options names."
+    },
+    {
+        "hook_name": "tpasfw_categories_title_filter",
+        "description": "Modify the category title before it is displayed.",
+        "code_example": "add_filter('tpasfw_categories_title_filter', function($title) {\n    return 'My Custom Title';\n});",
+        "additional_explanations": "Customize the title of product categories, allowing for localization or stylistic changes."
+    },
+    {
+        "hook_name": "tpasfw_category_link_filter",
+        "description": "Modify the URL of each category link.",
+        "code_example": "add_filter('tpasfw_category_link_filter', function($link, $term_id) {\n    return $link . '?additional_param=value';\n}, 10, 2);",
+        "additional_explanations": "Change or augment category URLs, such as adding query parameters or changing the link structure for SEO or tracking purposes."
+    },
+    {
+        "hook_name": "tpasfw_category_image_url_filter",
+        "description": "Modify the image URL of category thumbnails.",
+        "code_example": "add_filter('tpasfw_category_image_url_filter', function($url, $thumbnail_id) {\n    if (!$url) {\n        return 'path/to/default/image.jpg';\n    }\n    return $url;\n}, 10, 2);",
+        "additional_explanations": "Change the source of category images, add a default image, or adjust the image size for different layouts or designs."
+    },
+    {
+        "hook_name": "tpasfw_categories_output_filter",
+        "description": "Modify the entire HTML output of the categories function.",
+        "code_example": "add_filter('tpasfw_categories_output_filter', function($output) {\n    return '<div class=\"custom-wrapper\">' . $output . '</div>';\n});",
+        "additional_explanations": "Allows for wrapping the category output in additional HTML or modifying the output structure entirely for custom styling or layout."
+    },
+    {
+        "hook_name": "tpasfw_before_pagination_container",
+        "description": "Use this action to display additional information before paging shows.",
+        "code_example": "add_action('tpasfw_before_pagination_container', function() {\n    echo 'See more';\n});",
+        "additional_explanations": "Add title see more"
+    },
+    {
+        "hook_name": "tpasfw_after_pagination_container",
+        "description": "Use this action to display additional information after paging shows.",
+        "code_example": "add_action('tpasfw_after_pagination_container', function() {\n    echo 'See more';\n});",
+        "additional_explanations": "Add title see more"
+    },
+    {
+        "hook_name": "tpasfw_cache_expiration_time",
+        "description": "Modify Cache Expiration Time.",
+        "code_example": "add_filter('tpasfw_cache_expiration_time', function($time) {\n    return 24 * HOUR_IN_SECONDS;\n});",
+        "additional_explanations": "In this example, the cache expiration time is changed from 12 hours to 24 hours."
+    }
+    
+]
